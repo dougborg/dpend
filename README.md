@@ -21,7 +21,7 @@ dpend will also provide a "build" system for bash script modules. This will incl
   - dpend's main infrastructure will be as Bash-only as possible; external requirements shall be minimized as much as possible.
   - dpend shall establish and encourage best-practice conventions for bash scripts, and bash script packages.
 
-### For version, 1.0 dpend will support the sourcing of:
+### For version 1.0, dpend will support the sourcing of:
   - github gists
   - local folders (source .sh files recursively)
   - local / remote .sh files
