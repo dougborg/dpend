@@ -1,5 +1,6 @@
 dpend
 =====
+![depends](http://also.kottke.org/misc/images/un-depends.jpg)
 
 A dependency management framework for bash scripts.
 
