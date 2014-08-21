@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Dpend by dougborg</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Dpend</h1>
+        <p class="header">A dependency management framework for bash scripts.</p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/dougborg/dpend/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/dougborg/dpend/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/dougborg/dpend">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/dougborg">dougborg</a></p>
+
+
+      </header>
+      <section>
+        <h2>
+<a name="purpose" class="anchor" href="#purpose"><span class="octicon octicon-link"></span></a>Purpose</h2>
+
+<p>There is a lot of cool stuff out there written in Bash. <a href="http://github.com/dougborg/bashrc">Dotfiles</a>, <a href="http://github.com/sstephenson/bats">testing frameworks</a>, deployment frameworks, etc. Unfortunately, bash doesn't really have a common way to manage bash script dependencies. This leads to people solving the same problems over and over again, or (not much better) copying little snippets of code they found, modifying them to suit thier own purpose and rarely contributing back to the original script. This is great, but it means there is little to no community around bash script development.</p>
+
+<p>The aim of this project is to create that community. Perl has cpan, Python has pip, Ruby has gems, Java has maven central; bash will now have dpend.</p>
+
+<h2>
+<a name="implementation-plan" class="anchor" href="#implementation-plan"><span class="octicon octicon-link"></span></a>Implementation Plan</h2>
+
+<p>The first stage will be to create a small script that can be used to bootstrap (download and source) the main dpend script. From there, dpend and its conventions will take over downloading and sourcing the necessary dependencies for your scripts.</p>
+
+<p>dpend will also provide a "build" system for bash script modules. This will include convention-over-configuration support for testing, packaging and structuring a .dpend module.</p>
+
+<h3>
+<a name="general-design-tenets" class="anchor" href="#general-design-tenets"><span class="octicon octicon-link"></span></a>General design tenets:</h3>
+
+<ul>
+<li>dpend shall be written primarily for Bash v4; scripts MAY degrade gracefully for Bash v3.</li>
+<li>dpend shall strive to support Bash installed on as many platforms as possible, but GNU/Linux and OSX will be the primary focus.</li>
+<li>dpend's main infrastructure will be as Bash-only as possible; external requirements shall be minimized as much as possible.</li>
+<li>dpend shall establish and encourage best-practice conventions for bash scripts, and bash script packages.</li>
+</ul><h3>
+<a name="for-version-10-dpend-will-support-the-sourcing-of" class="anchor" href="#for-version-10-dpend-will-support-the-sourcing-of"><span class="octicon octicon-link"></span></a>For version 1.0, dpend will support the sourcing of:</h3>
+
+<ul>
+<li>github gists</li>
+<li>local folders (source .sh files recursively)</li>
+<li>local / remote .sh files</li>
+<li>local / remote .dpend archives (conforming to a TBD dpend packaging standard w/ resolution of transitive dpendencies.)</li>
+<li>a dpend standard coordinate system (TBD, but potentially similiar to Gradle's "org:module:version" standard.)</li>
+</ul><h3>
+<a name="version-10-will-also-support" class="anchor" href="#version-10-will-also-support"><span class="octicon octicon-link"></span></a>Version 1.0 will also support:</h3>
+
+<ul>
+<li>local caching of remote dpend resources.</li>
+<li>a convention-over-configuration "build" framework for structuring, testing, and publishing dpend packages.</li>
+</ul>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="http://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		          <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-35143181-3");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
