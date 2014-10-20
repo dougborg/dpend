@@ -1,3 +1,10 @@
+This project never got off the ground, go here:
+===============================================
+
+Lightweight bash package manager 
+http://bpkg.io/
+
+
 dpend
 =====
 
