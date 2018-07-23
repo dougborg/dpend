@@ -4,6 +4,9 @@ This project never got off the ground, go here:
 Lightweight bash package manager 
 http://bpkg.io/
 
+Basher
+https://github.com/basherpm/basher
+
 
 dpend
 =====
